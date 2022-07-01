@@ -1,9 +1,11 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #F3F4ED;
 }
 
 header {
-    background: #BBBBBB;
+    background: #424642;
     padding: 20px 0 20px;
 }
 
@@ -27,39 +29,45 @@ nav li {
 
 nav a {
     text-transform: uppercase;
-    color: black;
+    letter-spacing: 3px;
+    color: #F3F4ED;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
+    transition: 400ms;
 }
 
 nav a:hover{
-    color: #C78C19;
+    color: #C06014;
     text-decoration: underline;
 }
 
 .produtos {
-    width: 940px;
-    margin: 0 auto;
-    margin: 50px 0 50px;
+    padding: 5% 10%;
+    background: #536162;
 }
 
 .produtos li {
     display: inline-block;
+    background: white;
     text-align: center;
     vertical-align: top;
     padding: 30px 20px;
-    margin: 0 1.5%;
+    margin: 1.5% 1.5%;
     width: 30%;
+    height: auto;
     box-sizing: border-box;
-    border: #000000 solid 2px;
+    border: #202020 solid 3px;
     border-radius: 15px;
-    box-shadow: 5px 5px #202020;
+    box-shadow: 10px 10px #202020;
+    transition: 500ms;
     /* o box-sizing faz com que o tamanho não ultrapasse de 30%. agora, os valores de margin e padding serão embutidos DENTRO desses 30%, e não mais ultrapassando ele */
 }
 
 .produtos li:hover{
-    border-color: #C78C19;
+    color: #C06014;
+    border-color: #C06014;
+    box-shadow: 5px 5px #C06014;
 }
 
 .produtos li:active {
@@ -72,18 +80,28 @@ nav a:hover{
 
 .produtos h2 {
     font-size: 28px;
-    font-weight: bold;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: #202020;
 }
 
+.img-produtos {
+    max-width: 80%;
+}
 
 .produto-descricao {
     font-size: 18px;
+    color: #202020;
 }
 
 .produto-preco {
     font-size: 22px;
-    font-weight: bold;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
     margin-top: 10px;
+    color: #202020;
 }
 
 footer {
@@ -103,7 +121,11 @@ main{
 }
 
 form {
-    margin: 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8vh 10% 8vh;
 }
 
 form label, form p, legend {
@@ -112,11 +134,18 @@ form label, form p, legend {
     margin: 0 0 20px;
 }
 
+.form-container {
+    background: #536162;
+    padding-bottom: 5%;
+}
+
 .input-padrao {
     display: block;
     margin: 0 0 20px;
-    padding: 10px 25px;
+    padding: 15px 25px;
     width: 50%;
+    border: none;
+    border-radius: 10px;
 }
 
 .checkbox {
@@ -127,35 +156,37 @@ form label, form p, legend {
 .enviar {
     width: 40%;
     padding: 14px 0 14px;
-    background-color: #C78C19;
+    background-color: #C06014;
     border-radius: 10px;
     border: none;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.3s all;
+    transition: 0.4s all;
     cursor: pointer;
 }
 
 .enviar:hover {
     background-color: white;
-    color: #C78C19;
-    border: solid 1px #C78C19;
-    transform: scale(1.05) rotate(70deg);
+    color: #424642;
+    box-shadow: 10px 10px #424642;
+    transform: scale(1.05);
 }
 
 table {
-    margin: 20px 0 40px;
+    margin: 8vh 10%;
 }
 
 thead {
-    background: #555555;
-    color: white;
+    background: #F3F4ED;
+    color: black;
     font-weight: bold;
 }
 
 td, th {
     border: 1px solid black;
+    background: #F3F4ED;
+    color: black;
     padding: 8px 35px;
 }
 
@@ -165,9 +196,13 @@ td, th {
 }
 
 .titulo-principal {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
     text-align: center;
     font-size: 2em;
     margin: 0 0 1em;
+    color: #F3F4ED;
 }
 
 .titulo-principal:first-letter{
@@ -182,11 +217,15 @@ td, th {
     content: " ]";
 }
 
+.apresentacao {
+    background: #637172;
+}
 .principal {
     padding: 3em 0;
     width: 940px;
     margin: 0 auto;
 }
+
 
 .principal p {
     margin: 0 0 1em;
@@ -205,16 +244,17 @@ td, th {
     width: 150px;
     float: left;
     margin-right: 30px;
+    border-radius: 15px;
 }
 
 .beneficios {
     padding: 3em 0;
-    background: #888888;
+    background: #424642;
 }
 
 .conteudo-beneficios{
     width: 640px;
-    margin: 0 auto;
+    margin: 0 auto 10%;
 }
 
 .lista-beneficios {
@@ -232,25 +272,27 @@ td, th {
 }
 
 .itens:before{
-    content: " 🞂 "
+    content: " 🪒 "
 }
 
 .img-beneficios {
-    width: 60%;
+    margin-left: 5%;
+    width: 50%;
     opacity: 1;
     transition: 400ms;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px #F3F4ED;
+    border-radius: 15px;
 
 }
 
 .img-beneficios:hover {
-    width: 60%;
+    width: 55%;
     opacity: 0.3;
 }
 
 .mapa {
     padding: 3em 0;
-    background: linear-gradient(#FEFEFE, #888888);
+    background: linear-gradient(#637172, #424642);
 }
 
 .mapa-conteudo {
